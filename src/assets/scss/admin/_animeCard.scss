@@ -1,0 +1,65 @@
+@import '../definevariables';
+
+.imglist{  
+    .flex-img{
+        .image-container:hover .circle-button {
+            opacity: 1;
+          }
+        .image-container{
+            position: relative;
+            overflow: hidden; /* 确保放大的图片不会超出容器边界 */
+            display: inline-block;
+            img{
+                border-radius: 6px;
+                transition: transform 0.2s; /* 设置动画时间 */
+                transform-origin: center; /* 确保图片从中心放大 */
+            }
+            img:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+            .circle-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* 居中定位 */
+                width: 55px; /* 按钮宽度 */
+                height: 55px; /* 按钮高度 */
+                background-color: rgb(247, 55, 55); /* 按钮颜色 */
+                border-radius: 50%; /* 圆形 */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.3s ease;
+                opacity: 0; /* 默认不显示 */
+                cursor: pointer; /* 鼠标样式 */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+              }
+              
+        }
+        
+        p{
+            
+            padding: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            color: $withe;
+        }
+        p:hover{
+            text-decoration: none;
+            
+            color: red;
+            cursor: pointer;
+            
+        }
+        span{
+            font-size: 12px;
+            font-weight: 100;
+            color: $backwidth;
+        }
+        margin-top: 50px;
+        padding: 10px;
+        
+        text-align: center;
+    }
+}

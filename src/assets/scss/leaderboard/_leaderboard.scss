@@ -1,0 +1,38 @@
+@import '../definevariables';
+
+
+.video-leaderboard{
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+    background-color: rgb(17, 19, 25);
+    display: grid;
+    grid-template-rows: repeat(2, 250px);
+    align-items: center;
+    justify-items: center;
+    .leaderboard-card{
+        width: 100%;
+        height: 80%;
+        display: grid;
+        gap: 50px;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns:  repeat(2, 1050px);
+        .anime-leaderboard-hotTop{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            width: 70%;
+            height: 100%;
+        }
+        .anime-scoring-hotTop{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            width: 70%;
+            height: 100%;
+        }
+    }
+}

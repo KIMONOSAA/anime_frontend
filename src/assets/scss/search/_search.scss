@@ -1,0 +1,50 @@
+@import '../definevariables';
+
+
+.video-search{
+    width: 100%;
+    height: 100%;
+    .search-input{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .search-body{
+            input{
+                font-size: 25px;
+                height: 65px;
+                width: 700px;
+                border: 1px solid rgb(229, 227, 227);
+                box-shadow: 0 0 2px 2px rgb(243, 243, 243);
+                border-radius: 5px;
+                outline: none;  
+                resize:none;
+            }
+            button{
+                margin-left: 10px;
+                border-radius: 5px;
+                color: #ffffff;
+                font-size: 25px;
+                width: 100px;
+                height: 70px;
+                background-color: rgb(255, 38, 38);
+            }
+            button:hover{
+                cursor: pointer;
+                background-color: rgb(199, 30, 30);
+            }
+
+        }
+    }
+    .video-list{
+        width: 100%;
+        height: 50%;
+        .itemlist{
+            display: grid;
+            grid-template-columns: repeat(8, 250px); /* 6 列，每列宽度为 100px */
+             /* 列间距 */
+            padding: 0px 50px;
+        }
+    }
+}

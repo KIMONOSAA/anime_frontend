@@ -1,0 +1,69 @@
+@import '../definevariables';
+
+.header{
+    .wrapper{
+        width: 100%;
+        height: 1280px;
+        
+        .carousel{
+            
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+            .container{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                
+
+                .slide{
+                    flex-shrink: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+                .slide::after {
+                    content: ""; /* 伪元素用于添加渐变背景 */
+                    position: absolute; /* 绝对定位相对于容器 */
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0)); /* 渐变从下到上，从黑色到透明白色 */
+                }
+            }
+
+            .Btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(53, 47, 47, 0.3);
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+                height: 500px;
+                border: none;
+                cursor: pointer;
+                z-index: 10;
+                width: 50px;
+            }
+            
+            .BtnLeft{
+                left: 0;
+            }
+            
+            .BtnRight{
+                right: 0;
+            }
+
+        }
+    }
+}

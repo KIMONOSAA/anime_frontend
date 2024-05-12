@@ -1,0 +1,175 @@
+@import '../definevariables';
+
+
+
+.right{
+    color: #ffffff;
+    padding-top: 65px;
+    .video-info{
+        .video-info-text{
+            padding-left: 5px;
+            display: flex;
+
+            p{
+                font-size: 25px;
+                margin-right: 15px;
+            }
+            p:hover{
+                cursor: pointer;
+                color: #f70404;
+            }
+        }
+        .horizon{
+            margin-left: 15px;
+            width: 30px;
+            height: 3px;
+            background-color: #f70404;
+            transition: transform 0.5s ease-in-out; 
+        }
+
+        .horizon.move-right{
+            transform: translateX(65px); 
+        }
+        .video-info-number{
+            
+            margin-top: 25px;
+            hr{
+                margin-left: 5px;
+                width: 100%;
+            }
+            .video-info-info{
+                padding-left: 5px;
+                display: flex;
+                font-size: 20px;
+                margin-top: 25px;
+                .video-info-info-info{
+                    display: flex;
+                
+                }
+                .video-info-info-info:hover{
+                    cursor: pointer;
+                    color: #f70404;
+                }
+            }
+            .video-info-list{
+                
+                margin-top: 50px;
+                .video-info-center{
+                    padding-left: 5px;
+                    ul{
+                        list-style-type: none;
+                        padding: 20px 0 20px 5px;
+                        display: flex;
+                        li{
+                            color: #ffffff;
+                            margin-right: 5px;
+                        }
+                        li:hover{
+                            color: #f70404;
+                        }
+                    }
+                }
+            }
+            .video-score{
+                button{
+                    margin-left: 340px;
+                    border: 0;
+                    cursor: pointer;
+                    background-color: rgb(255, 0, 0);    
+                    border-radius: 8px;
+                    width: 70px;
+                    height: 40px;
+                    color: white;
+                }
+                button:hover{
+                    background-color: rgb(226, 17, 17); 
+                }
+                  .socre-top{
+                    display: flex;
+                    p{
+                        margin-left: 160px;
+                        margin-top: 10px;
+                    }
+                  }   
+                  textarea{
+                    width: 410px;
+                    height: 150px;
+                    resize: none;
+                  }    
+            }
+            .video-info-recommend{
+                .recommend{
+                    padding-top: 5px;
+                    padding-left: 8px;
+                }
+                .video-info-recommend-list{
+                    display: grid;
+                    grid-template-columns: repeat(2, 210px);
+                    .imglists{  
+                        .flex-imgs{
+                            .image-containers:hover .circle-buttons {
+                                opacity: 1;
+                            }
+                            .image-containers{
+                                position: relative;
+                                overflow: hidden; /* 确保放大的图片不会超出容器边界 */
+                                display: inline-block;
+                                img{
+                                    border-radius: 6px;
+                                    transition: transform 0.2s; /* 设置动画时间 */
+                                    transform-origin: center; /* 确保图片从中心放大 */
+                                }
+                                img:hover{
+                                    cursor: pointer;
+                                    transform: scale(1.2);
+                                }
+                                .circle-buttons {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%); /* 居中定位 */
+                                    width: 55px; /* 按钮宽度 */
+                                    height: 55px; /* 按钮高度 */
+                                    background-color: rgb(247, 55, 55); /* 按钮颜色 */
+                                    border-radius: 50%; /* 圆形 */
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    transition: opacity 0.3s ease;
+                                    opacity: 0; /* 默认不显示 */
+                                    cursor: pointer; /* 鼠标样式 */
+                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+                                }
+                                
+                            }
+                            
+                            p{
+                                
+                                padding: 5px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: $withe;
+                            }
+                            p:hover{
+                                text-decoration: none;
+                                
+                                color: red;
+                                cursor: pointer;
+                                
+                            }
+                            span{
+                                font-size: 12px;
+                                font-weight: 100;
+                                color: $backwidth;
+                            }
+                            
+                            padding: 10px;
+                            
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

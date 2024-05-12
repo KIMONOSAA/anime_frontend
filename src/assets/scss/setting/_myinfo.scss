@@ -1,0 +1,261 @@
+@import '../definevariables';
+
+
+.center{
+    height: 500px;
+    width: 700px;
+    display: flex;
+    position: relative;
+    .success{
+        width: 750px;
+        position: absolute;
+        top: -20px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(127, 255, 159);
+        border-radius: 5px;
+        // box-shadow: 0 0 5px 1px rgb(175, 170, 170);
+    }
+    .error{
+        width: 750px;
+        position: absolute;
+        top: -20px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 0, 0);
+        border-radius: 5px;
+        // box-shadow: 0 0 5px 1px rgb(175, 170, 170);
+    }
+    .myinfo{
+        
+        height: 500px;
+        width: 700px;
+        display: flex;
+        form{
+            
+            position: relative;
+            .save{
+                background-color: $aqua;
+                cursor: pointer;
+                border: 0;
+                border-radius: 5px;
+                padding: 6px;
+                position: absolute;
+                right: -10px;
+                bottom: 40px;
+            }
+            .save:hover{
+                background-color: rgb(85, 255, 255);
+            }
+            .calendar{
+                
+                opacity: 0;
+                border-radius: 10px;
+                border: 1px solid rgb(229, 227, 227);
+                box-shadow: 0 0 10px 8px rgb(243, 243, 243);
+                width: 290px;
+                height: 321px;
+                position: absolute;
+                
+                left: 95px;
+                .calendar-body{
+                    width: 290px;
+                    height: 270px;
+                    ul{
+                        border-bottom: 1px solid rgb(201, 197, 197);
+                        padding: 10px 0px 10px 15px;
+                        display: flex;
+
+                        .day{
+                            width: 16%;
+                            list-style: none;
+                        }
+                    }
+                    
+                }
+                .calendar-number{
+                    
+                    width: 100%;
+                    height: 250px;
+                    .calendar-number-ul{
+                        width: 290px;
+                        height: 250px;
+                        display: grid;
+                        grid-template-columns: repeat(7, 40px);
+                        
+                        
+                        
+                        .btn{
+                            
+                            cursor: pointer;
+                        }
+                        
+                        .active{
+                            border-radius: 50%;
+                            background-color: $aqua;
+                            cursor: pointer;
+                        }
+                        .active:hover{
+                            background-color: $deepaqua;
+                        }
+                        .inactive{
+                            
+                            // border: 1px solid rgb(169, 165, 165);
+                            
+                            pointer-events: none;  
+                            opacity: 0.6;  
+                            cursor: not-allowed;  
+                        }
+                        
+                        li{
+                            font-family: 'Young Serif', serif;
+                            width: 100%;
+                            list-style: none;
+                            display: grid;
+                            justify-items: center;
+                            align-items: center;
+                        }
+                    }
+                    ul{
+                        padding: 0;
+                    }
+                }
+                .calendar-top{
+                    width: 290px;
+                    
+                    display: flex;
+                    justify-content: center;
+                    
+                    .left-arrow{
+                        width: 20%;
+                        height: 30px;
+                        display: flex;
+                        justify-content: start;
+                        .left-year{
+                            cursor: pointer;
+                        }
+                        .left-month{
+                            cursor: pointer;
+                        }
+                        
+                    }
+                    .center-text{
+                        .year{
+                            cursor: pointer;
+                            margin-right: 5px;
+                        }
+                        .year:hover{
+                            color: rgb(80, 255, 255);
+                        }
+                        .month{
+                            cursor: pointer;
+                        }
+                        .month:hover{
+                            color: rgb(80, 255, 255);
+                        }
+                        padding: 5px;
+                        font-family: 'Young Serif', serif;
+                        font-size: 18px;
+                        width: 60%;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .right-arrow{
+                        .right-year{
+                            cursor: pointer;
+                        }
+                        .right-month{
+                            cursor: pointer;
+                        }
+                        width: 20%;
+                        height: 30px;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+            .calendar-show{
+                opacity: 1;
+            }
+            height: 500px;
+            width: 700px;
+            .right-flex{
+                width: 100%;
+                
+                padding: 15px;
+                display: flex;
+                justify-items: center;
+                
+                .type{
+                    display: flex;
+                    width: 12%;
+                    justify-items: center;
+                    label{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        
+                        align-items: center;
+                    }
+                }
+                .name{
+                    position: relative;
+                    width: 100%;
+                    button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        width: 35px;
+                        height: 30px;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                        border: 1px solid rgb(211, 206, 206);
+                        cursor: pointer;
+                        
+                    }
+                    .btns{
+                        background-color: $aqua;
+                    }
+                    display: flex;
+                    justify-content: start;
+                    .textarea-border{
+                        width: 85%;
+                        border: 1px solid rgb(229, 227, 227);
+                        box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                        border-radius: 5px;
+                        height: 110px;
+                        resize:none;
+                        outline: none;  
+                    }
+
+                    .input-border{
+                        height: 30px;
+                        border: 1px solid rgb(229, 227, 227);
+                        box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                        border-radius: 5px;
+                        outline: none;  
+                        
+                    }
+                    .input-relative{
+                        position: absolute;
+                        top: 6px;
+                        left: 5px;
+                    }
+                    .input-button{
+                        width: 135px;
+                        height: 28px;
+                        border-radius: 5px;
+                        background-color: white;
+                        border: 1px solid rgb(229, 227, 227);
+                        box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                        
+                    }
+                }
+            }
+        }
+        padding: 20px;
+        
+    }
+}

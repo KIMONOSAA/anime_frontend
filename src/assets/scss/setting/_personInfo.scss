@@ -1,0 +1,71 @@
+@import '../definevariables';
+.overall{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow-x: auto;
+    .image{
+        margin-top: px;
+        width: 100%;
+        height: 30%;
+        object-fit: cover;
+    }
+    .user{
+        margin-top: 15px;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        .user-info{
+            
+            .label{
+                background-color: aliceblue;
+                width: 150px;
+                height: 500px;
+                .setting{
+                    width: 150px;
+                    height: 100px;
+                    
+                    .name{
+                            cursor: pointer;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            align-items: center;
+                            
+                            p{
+                            
+                                // margin-top: 40px;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                
+                            }
+                    }
+                    .name:hover{
+                        background-color: rgb(168, 254, 255);
+                    }
+                }
+            }
+            .info{
+                width: 100%;
+                
+                
+            }
+            width: 900px;
+            height: 500px;
+            border: 1px solid rgb(229, 227, 227);
+            box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+            border-radius: 5px;
+            
+            display: flex;
+            
+            justify-self: center;
+            
+        }
+    }
+    
+}

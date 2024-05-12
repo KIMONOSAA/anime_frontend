@@ -1,0 +1,198 @@
+@import '../definevariables';
+
+
+.info-img{
+    .list{
+        margin-left: 50px;
+        margin-top: 70px;
+        margin-bottom: 40px;
+        h1{
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+    }
+    .context-xian{
+        
+        .horizontal-line {
+            margin-left: 50px;
+            height: 2px; /* 线条的高度 */
+            background-color: #575454; /* 灰色 */
+            margin-top: 3px; /* 在线条和<span>之间添加一些间隙 */
+        }
+        
+        span{
+            margin-left: 50px;
+            
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            margin-left: 50px;
+            margin-top: 30px;
+            padding-bottom: 50px;
+            li{
+                border: 1px solid rgb(150, 135, 135);
+                margin-right: 30px;
+                padding: 7px;
+                border-radius: 4px;
+                background-color: $navbarbackground;
+            }
+            li:hover{
+                cursor: pointer;
+                color: red;
+            }
+        }
+    }
+    
+    .jianjie{
+        .description{
+            margin-top: 30px;
+            padding-bottom: 65px;
+            color: #dfd1d1;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+        margin-left: 50px;
+        button{
+            border: 0;
+            cursor: pointer;
+            background-color: aqua;    
+            border-radius: 8px;
+            width: 70px;
+            height: 40px;
+            color: white;
+        }
+    }
+    .type{
+        margin-left: 50px;
+        span{
+            color: rgb(192, 182, 182);
+            margin-right: 20px;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+        span:hover{
+            color: red;
+            cursor: pointer;
+        }
+        padding-bottom: 50px;
+    }
+    color: #ffffff;
+    width: 100%;
+    height: auto;
+    background-color: rgb(17, 19, 25);
+    .context{
+        
+        background-color: #111c26;
+        .context-top{
+            display: flex;
+            img{
+                margin: 100px 50px 20px 50px;
+                width: 300px;
+                height: 380px;
+            }
+            .info{
+                .info-font{
+                    .top{
+                        margin-bottom: 20px;
+                        :first-child{
+                            color: red;
+                            font-size: 18px;
+                            font-family: 'Young Serif', serif;
+                        }
+                        span{
+                            font-size: 16px;
+                            font-family: 'Ma Shan Zheng', cursive;   
+                        }
+                    }
+                    .centers{
+                        
+                        display: flex;
+                        span{
+                            
+                            color: red;
+                            font-size: 18px;
+                            margin-right: 10px;
+                        }
+                        ul{
+                            margin-left: 5px;
+                            
+                            li{
+                                
+                                margin-right: 15px;
+                            }
+                        }
+    
+                    }
+                    .bottwon{
+                        span{
+                            font-size: 16px;   
+                            font-family: 'Ma Shan Zheng', cursive;
+                        }
+                        margin-top: 20px;
+                        :first-child{
+                            color: $red;
+                            font-size: 18px;
+                            font-family: 'Young Serif', serif;
+                        }
+                        
+                    }
+                    .btnlist{
+                        display: flex;
+                        .btn{
+                        
+                            margin-top: 105px;
+                            button{
+                                border: 0;
+                                cursor: pointer;
+                                background-color: $aqua;    
+                                border-radius: 8px;
+                                width: 130px;
+                                height: 55px;
+                                color: $withe;
+                            }
+                            button:hover{
+                                background-color: $deepaqua;
+                            }
+                        }
+                        .btn2{
+                            margin-top: 105px;
+                            margin-left: 20px;
+                            button{
+                                border: 0;
+                                cursor: pointer;
+                                background-color: $reds;    
+                                border-radius: 8px;
+                                width: 130px;
+                                height: 55px;
+                                color: $withe;
+                            }
+                            button:hover{
+                                background-color: $deepred;
+                            }
+                        }
+                    }
+                }
+                h1{
+                    font-size: 45px;
+                    margin-bottom: 20px;
+                    font-weight: 1000;
+                    font-family: 'Ma Shan Zheng', cursive;
+                    font-family: 'Noto Sans SC', sans-serif;
+                }
+                ul{
+                    display: flex;
+                    .btninfo{
+                       
+                        margin-right: 10px;
+                        margin-bottom: 15px;
+                        font-size: 20px;
+                    }
+                    li{
+                        font-family: 'Ma Shan Zheng', cursive;
+                        list-style: none;
+                    }
+                }
+                margin-top: 100px;
+            }
+        }
+        
+    }
+}

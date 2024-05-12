@@ -1,0 +1,56 @@
+@import '../definevariables';
+
+
+.gobal{
+
+    position: relative;
+    .gobal-error{
+        position: fixed;
+        z-index: -1;
+        top: -150px;
+        left: 47%;
+        transition: top 0.3s ease-out;
+        .btn{
+            width: 100px;
+            height: 45px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            transition: top 0.3s ease-out;
+        }
+    }
+    .gobal-error.message-error{
+        top: 75px;
+        transition: top 0.3s ease-out;
+        z-index: 100;
+        
+    }
+
+
+    .gobal-success{
+        position: fixed;
+        z-index: -1;
+        top: -150px;
+        left: 47%;
+        transition: top 0.3s ease-out;
+        .btn{
+            width: 100px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            background-color: rgb(0, 255, 106);
+            
+        }
+    }
+    .gobal-success.message-success{
+        top: 75px;
+        z-index: 100;
+    }
+
+}

@@ -1,0 +1,214 @@
+@import '../definevariables';
+
+
+.video-comments{
+    width: 100%;
+    height: 100%;
+    
+    .comments{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: rgb(235, 232, 232);
+    }
+    .all-comments{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .self-comments{
+            display: flex;
+            padding: 10px;
+            h1{
+                color: #000000;
+                margin-right: 50px;
+            }
+        }
+        .top{
+            margin-top: 20px;
+            width: 93%;
+            display: flex;
+           
+            .self-user{
+                margin-left: 10px;
+                .self-img{
+                    border-radius: 50%;
+                    width: 45px; /* 图片宽度设置为100%，使其与div宽度一致 */  
+                    height: 45px; /* 图片高度设置为100%，使其与div高度一致 */  
+                    object-fit: cover;
+                }
+            }
+            .self-text{
+                margin-left: 20px;
+                width: 90%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border: 1px solid rgb(229, 227, 227);
+                box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                border-radius: 5px;
+                outline: none;  
+                resize:none;
+            }
+        }
+        .submit-input{
+            
+
+            position: absolute;
+            right: 50px;
+            display: block;
+            transform: translateY(-60px);
+            padding-top: 13px;
+            
+            button{
+                cursor: pointer;
+                border: 1px solid rgb(197, 192, 192);
+                box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                border-radius: 5px;
+                // outline: none;  
+                
+                // resize:none;
+                background-color: #79ebfa;
+                width: 75px;
+                height: 45px;
+            }
+        }
+        .submit-input.slide-down {  
+            opacity: 1;
+            transform: translateY(10px); 
+            /* 下滑100px后的位置 */  
+          } 
+        .submit-input.slide-up{
+            opacity: 0;
+            // display: none;
+            transform: translateY(-60px); 
+        }
+        .user-list-all{
+            padding: 10px 10px 0px 15px;
+            .user-list{
+                .counterpart-comment{
+                    padding-bottom: 20px;
+                    width: 100%;
+                    display: flex;
+                    .counterpart-img{
+                        padding-right: 20px;
+                        .img{
+                            border-radius: 50%;
+                            width: 45px; /* 图片宽度设置为100%，使其与div宽度一致 */  
+                            height: 45px; /* 图片高度设置为100%，使其与div高度一致 */  
+                            object-fit: cover;
+                        }
+                    }
+                    .click-h{
+                        margin-bottom: 30px;
+                        cursor: pointer;
+                        color: #e0186b;
+                    }
+                    .bottwon{
+                        position: relative;
+                        
+                        .icon{
+                            display: flex;
+                            margin-bottom: 35px;
+                            position: relative;
+                            .upoff-alt{
+                                position: absolute;
+                                cursor: pointer;
+                                margin-right: 5px;
+                            }
+                            .up-alt{
+                                position: absolute;
+                                left: 0;
+                                cursor: pointer;
+                            }
+                            .downoff-alt{
+                                position: absolute;
+                                left: 20px;
+    
+                                cursor: pointer;
+                            }
+                            .down-alt{
+                                position: absolute;
+                                left: 20px;
+                                cursor: pointer;
+                            }
+                            .replay{
+                                position: absolute;
+                                left: 45px;
+                                top: -2px;
+                                cursor: pointer;
+                            }
+                        }
+                        .top-son{
+                            
+                            width: 100%;
+                            display: flex;
+                           
+                            .self-user{
+                                margin-left: 10px;
+                                .self-img{
+                                    border-radius: 50%;
+                                    width: 45px; /* 图片宽度设置为100%，使其与div宽度一致 */  
+                                    height: 45px; /* 图片高度设置为100%，使其与div高度一致 */  
+                                    object-fit: cover;
+                                }
+                            }
+                            .self-text{
+                                margin-left: 20px;
+                                width: 90%;
+                                height: 50px;
+                                line-height: 50px;
+                                text-align: center;
+                                border: 1px solid rgb(229, 227, 227);
+                                box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                                border-radius: 5px;
+                                outline: none;  
+                                resize:none;
+                            }
+                        }
+                        .submit-input-son{
+                            margin-left: 90%;
+                            padding-top: 13px;
+                            
+                            button{
+                                cursor: pointer;
+                                border: 1px solid rgb(197, 192, 192);
+                                box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                                border-radius: 5px;
+                                // outline: none;  
+                                
+                                // resize:none;
+                                background-color: #79ebfa;
+                                width: 75px;
+                                height: 45px;
+                            }
+                        }
+
+                    }
+                    .counterpart-info{
+                        .hr{
+                            border: 1px solid rgb(236, 101, 101);
+                        }
+                        width: 100%;
+                        .counterpart-name{
+                            color: #f81d96;
+                            padding: 0 0 10px 0;
+                        }
+                        .counterpart-context{
+                            margin-bottom: 10px;
+                        }
+                        .counterpart-up{
+                            display: flex;
+                            .time{
+                                color: #ada6a6;
+                                font-size: 12px;
+                                margin-bottom: 15px;
+                                margin-right: 20px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import '../definevariables';
+
+.verification{
+    margin-bottom: 25px;
+    position: relative;
+    .successs{
+        width: 310px;
+        position: absolute;
+        top: -259px;
+        left: -20px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(127, 255, 159);
+        border-radius: 5px;
+        // box-shadow: 0 0 5px 1px rgb(175, 170, 170);
+    }
+    .errors{
+        width: 310px;
+        position: absolute;
+        top: -259px;
+        left: -20px;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 0, 0);
+        border-radius: 5px;
+        // box-shadow: 0 0 5px 1px rgb(175, 170, 170);
+    }
+    .verification-email{
+        .codeEmail{
+                margin-left: 20px;
+                height: 30px;
+                border: 1px solid rgb(229, 227, 227);
+                box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                border-radius: 5px;
+                outline: none;  
+                
+            
+        }
+        button{
+            margin-left: 5px;
+            width: 80px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(211, 206, 206);
+            cursor: pointer;
+        }
+        .btnss{
+            width: 35px;
+            position: absolute;
+            left: 35px;
+            top: 0px;
+            display: block;
+        }
+    }
+
+}

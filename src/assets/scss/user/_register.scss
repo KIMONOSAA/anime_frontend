@@ -1,0 +1,131 @@
+@import '../definevariables';
+
+
+.register{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: white;
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    #cover{
+        height: 100%;
+        width: 100%;
+        background-color : #000; 
+        position: absolute;
+        left: 0px;  
+        top: 0px; 
+        // 注意：filter 属性通常用于旧版 IE 浏览器，现代浏览器可能不支持 alpha 过滤器  
+        // filter: "alpha(opacity=30)",  
+        opacity: 0.3; // 使用数字而不是字符串  
+        display: none;  
+        z-index: 3 // 使用 zIndex 替代 z-index  
+    }
+    form{
+        
+        .slider-verify{
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .slider-verify.s{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        position: relative;
+        .submit{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .no-underline{
+                text-decoration: none;
+            }
+            button{
+                text-decoration: none;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                width: 35px;
+                height: 30px;
+                margin-right: 10px;
+                border-radius: 5px;
+                border: 1px solid rgb(211, 206, 206);
+                cursor: pointer;
+                
+            }
+            button:hover{
+                background-color: $aqua;
+            }
+        }
+        .success{
+            width: 100%;
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(127, 255, 159);
+            border-radius: 5px;
+            // box-shadow: 0 0 5px 1px rgb(175, 170, 170);
+        }
+        .error{
+            width: 100%;
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(255, 0, 0);
+            border-radius: 5px;
+            // box-shadow: 0 0 5px 1px rgb(175, 170, 170);
+        }
+        border: 1px solid rgb(229, 227, 227);
+        box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+        border-radius: 5px;
+        .loginname{
+            margin-bottom: 30px;
+        }
+        text-align: center;
+        padding: 15px;
+        width: 300px;
+        height: 400px;
+        
+            .center-border{
+                display: grid;
+                width: 100%;
+                align-items: center; /* 垂直居中 */  
+                justify-items: center; /* 水平居中 */  
+                grid-template-columns: repeat(2, 110px);
+    
+                .lable-name{
+    
+                    label{
+                        display: block;
+                        margin-top: 15px;
+                        margin-bottom: 35px;
+                    }
+    
+                }
+                .input-name{
+    
+                    input{
+                        
+                        height: 30px;
+                        border: 1px solid rgb(229, 227, 227);
+                        box-shadow: 0 0 10px 2px rgb(243, 243, 243);
+                        border-radius: 5px;
+                        outline: none;  
+                        display: block;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    
+}

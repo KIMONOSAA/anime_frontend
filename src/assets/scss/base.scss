@@ -1,0 +1,55 @@
+@import '../scss/navbar/navbar';
+@import '../scss/definevariables';
+@import '../scss/navbar/header';
+@import '../scss/admin/addAnime';
+@import '../scss/admin/animeList';
+@import '../scss/admin/animeCard';
+@import '../scss/admin/animeInfo';
+@import '../scss/admin/addVideoUrl';
+@import '../scss/admin/videoPlayers';
+@import '../scss/user/login';
+@import '../scss/user/register';
+@import '../scss/setting/personInfo';
+@import '../scss/setting/myinfo';
+@import '../scss/test/uploadfile';
+@import '../scss/setting/myavatar';
+@import '../scss/user/verificationEmail';
+@import '../scss/videoComments/videoComments';
+@import '../scss/videoComments/recommendedVideos';
+@import '../scss/utils/StarScore.scss';
+@import '../scss/search/search';
+@import '../scss/leaderboard/leaderboard';
+@import '../scss/leaderboard/iterate';
+@import '../scss/error/autoErrorAndSuccess';
+@import '../scss/admin/homeItemListCard';
+@import '../scss/admin/homeAnimeCard';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    font-family: 'Asap', sans-serif;
+    font-family: 'Ma Shan Zheng', cursive;
+    // font-family: 'Noto Sans SC', sans-serif;
+    // font-family: 'Young Serif', serif;
+    
+  }
+  
+  // body{
+  //     width: 100%;
+  //     height: 100%;
+  //     background-color: $background;
+  //     transition:  0.1s ease-in-out;
+  // }
+  
+  // #root{
+  //       width: 100%;
+  //     height: 100%;
+  // }
+  html, body, #root {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: $navbarbackground;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,321 @@
+@import '../definevariables';
+
+
+.allanime{
+    width: 100%;
+    height: 100%;
+    background-color: $navbarbackground;
+    .label, .types, .years {
+        overflow-x: hidden;
+      }
+    .label{
+        
+        text-align: center;
+        
+        width: 100%;
+        padding: 0 60px;
+        
+        .channles{
+            display: grid;
+            grid-template-columns: repeat(2, 95px);
+            span{
+                
+                margin-top: 5px;
+                color: $biaozhunbai;
+            } 
+            ul{
+                margin-left: 45px;
+                display: grid;
+                grid-template-columns: repeat(3, 95px);
+                li{
+                    width: 90px;
+                    height: 30px;
+                    
+                    font-family: 'Ma Shan Zheng', cursive;
+                }
+                
+                list-style: none;
+                
+            }
+
+        }
+        .types{
+
+            
+            display: grid;
+            grid-template-columns: repeat(2, 95px);
+            // grid-template-columns:  1fr 2fr;
+            span{
+                margin-top: 15px;
+                color: $biaozhunbai;
+            }
+            
+            ul{
+                
+                margin-top: 10px;
+                margin-left: 45px;
+                display: grid;
+                grid-template-columns: repeat(14, 95px);
+                li{
+                    width: 90px;
+                    height: 30px;
+                    font-family: 'Ma Shan Zheng', cursive;
+                }
+                
+                list-style: none;
+                
+            }
+        }
+        .years{
+            width: 100%;
+            height: 100%;
+             // display: grid; 
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            span{
+                width: 100px;
+                padding-top: 10px;
+                color: $biaozhunbai;
+            }
+            .scorll{
+                width: 1800px;
+                
+                overflow-x: hidden;
+                overflow-y: hidden;
+                margin-top: 10px;
+                margin-left: 40px;
+                display: grid;
+                grid-template-columns: repeat(25, 95px);
+                .uldiv{
+                    width: 90px;
+                    height: 30px;
+                    font-family: 'Ma Shan Zheng', cursive;
+                    
+                }
+                
+                list-style: none;
+                    
+                
+            }
+            .scorll.dragging {
+                scroll-snap-type: none;
+                scroll-behavior: auto;
+              }
+            
+           
+            
+        }
+    }
+    
+    .btn{
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-right: 3px;
+        background-color: $btnback;
+        border-radius: 2px;
+    }
+    .btn:hover{
+        color: $navbarlihovercolor;
+    }
+    padding-top: 80px;
+    color: $withe;
+    
+    .btncolor{
+        background-color: $navbarlihovercolor;
+        cursor: auto;
+    }
+    .btncolor:hover{
+        color: $withe;
+    }
+    
+    .itemlist{
+        display: grid;
+        grid-template-columns: repeat(8, 250px); /* 6 列，每列宽度为 100px */
+         /* 列间距 */
+        padding: 0px 50px;
+    }
+}
+
+// @media screen and (max-width:1850px) {
+//     .allanime{
+//         .label{
+//             width: 1700px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(7, 230px);
+//         }
+//     }
+    
+    
+    
+// }
+
+
+// @media screen and (max-width:1700px) {
+//     .allanime{
+//         .label{
+//             width: 1620px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(6, 230px);
+//         }
+//     }
+    
+    
+    
+// }
+
+// @media screen and (max-width:1630px) {
+//     .allanime{
+//         .label{
+//             width: 1450px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(6, 230px);
+//         }
+//     }
+    
+    
+    
+// }
+
+
+// @media screen and (max-width:1500px) {
+//     .allanime{
+//         .label{
+//             width: 1400px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(6, 230px);
+//         }
+//     }
+    
+    
+    
+// }
+
+
+// @media screen and (max-width:1450px) {
+//     .allanime{
+//         .label{
+//             width: 1260px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(5, 230px);
+//         }
+//     }
+    
+// }
+
+// @media screen and (max-width:1300px) {
+//     .allanime{
+//         .label{
+//             width: 1200px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(5, 230px);
+//         }
+//     }
+    
+// }
+
+
+// @media screen and (max-width:1230px) {
+//     .allanime{
+//         .label{
+//             width: 1100px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(4, 230px);
+//         }
+//     }
+    
+// }
+
+
+// @media screen and (max-width:1160px) {
+//     .allanime{
+//         .label{
+//             width: 1000px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(4, 230px);
+//         }
+//     }
+    
+// }
+
+// @media screen and (max-width:1120px) {
+//     .allanime{
+//         .label{
+//             width: 800px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(3, 230px);
+//         }
+//     }
+    
+// }
+
+// @media screen and (max-width:1100px) {
+//     .allanime{
+//         .label{
+//             width: 780px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(3, 230px);
+//         }
+//     }
+    
+// }
+
+// @media screen and (max-width:1090px) {
+//     .allanime{
+//         .label{
+//             width: 700px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(3, 210px);
+//         }
+//     }
+    
+// }
+
+
+// @media screen and (max-width:700px) {
+//     .allanime{
+//         .label{
+//             width: 600px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(2, 210px);
+//         }
+//     }
+    
+// }
+
+
+// @media screen and (max-width:685px) {
+//     .allanime{
+//         .label{
+//             width: 600px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(2, 210px);
+//         }
+//     }
+    
+// }
+
+
+// @media screen and (max-width:600px) {
+//     .allanime{
+//         .label{
+//             width: 550px;
+//         }
+//         .itemlist{
+//             grid-template-columns: repeat(2, 210px);
+//         }
+//     }
+    
+// }
