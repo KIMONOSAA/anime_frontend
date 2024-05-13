@@ -11,7 +11,7 @@ const AnimeInfo = () => {
     const urlId = dataId;
     const [isLoading,setIsLoading] = useState<boolean>(false);
     const [inFo,setInfo] = useState<API.VideoInfo | null>(null)
-    const [videoNumber,setVideoNumber] = useState<number[]>();
+    const [videoNumber,setVideoNumber] = useState<[]>();
     const [isVideoUrl,setIsVideoUrl] = useState<boolean>(false);
     
     
@@ -116,8 +116,8 @@ const AnimeInfo = () => {
                                             <ul>
                                                 {isVideoUrl && 
                                                     (
-                                                        videoNumber.map((item,index) => (
-                                                            <NumberButton key={index} index={index} item={item} info={inFo} dataId={dataId} videoNumber={videoNumber}/>
+                                                        videoNumber.map((item : {sectionId : number,urlId : number },index) => (
+                                                            <NumberButton key={item.sectionId} index={index} item={item} info={inFo} dataId={dataId} videoNumber={videoNumber}/>
                                                         ))
                                                     )
                                                 }

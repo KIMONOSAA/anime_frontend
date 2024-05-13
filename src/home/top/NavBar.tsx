@@ -122,7 +122,7 @@ const NavBar = () => {
           
           <ul>
           <div className='left'>
-              <img style={{width : "36px", height: "36px"}} src='../../../public/asouli.png'/>
+              <img style={{width : "36px", height: "36px"}} src='/asouli.png'/>
           </div>
               <Link className='no-underline' to={'/'}> 
                 <li>首页</li>
@@ -166,7 +166,7 @@ const NavBar = () => {
                       (
                         <div>
                       <Link className="no-underline" to={'/owninfo'}>
-                        {userInfo.file ? <img src={`data:image/png;base64, ${userInfo.file}`} alt="Selected Avatar" /> : <img src={`src/assets/images/cropped-2400-1280-1353172.jpg`} alt="Selected Avatar" />}
+                        {userInfo.file ? <img src={`data:image/png;base64, ${userInfo.file}`} alt="Selected Avatar" /> : <img src={`/cropped-2400-1280-1353172.jpg`} alt="Selected Avatar" />}
                         
                       </Link>
                       </div>

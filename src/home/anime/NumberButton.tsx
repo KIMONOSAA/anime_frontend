@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const NumberButton = ({index,item,info,dataId,videoNumber} : {index: number,item : number ,info: API.VideoInfo,dataId:string | undefined,videoNumber: number[]}) => {
+const NumberButton = ({index,item,info,dataId,videoNumber} : {index: number,item :  {sectionId : number,urlId : number } ,info: API.VideoInfo,dataId:string | undefined,videoNumber: []}) => {
   const videoDataAndVideoInfo : API.VideoDataAndVideoInfoInterface = {
         id : index,
         // data: videoUrl[index].data,
@@ -23,8 +23,8 @@ const NumberButton = ({index,item,info,dataId,videoNumber} : {index: number,item
   }
   return (
     <>
-        <Link to={`/animePlayers/${dataId}/${item}` } state={{ videoDataAndVideoInfo }}>
-            <li className='num' key={index}>第{item < 10 ? `0${item}` : item}集</li>
+        <Link to={`/animePlayers/${dataId}/${item.urlId}` } state={{ videoDataAndVideoInfo }}>
+            <li className='num' key={index}>第{item.sectionId < 10 ? `0${item.sectionId}` : item.sectionId}集</li>
         </Link>
     </>
   )

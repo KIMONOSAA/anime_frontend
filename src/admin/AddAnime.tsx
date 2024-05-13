@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { addAnime } from '../utils/ApiFunction';
+import { addAnime, AddFile } from '../utils/ApiFunction';
 import AutoErrorMessage from '../error/AutoErrorMessage';
 import AutoSuccessMessage from '../error/AutoSuccessMessage';
 
@@ -12,8 +12,8 @@ const AddAnime = () => {
     const [addListName,setAddListName] = useState<string[]>([]);
     const [addListType,setAddListType] = useState<string[]>([]);
     const [imagePreview, setImagePreview] = useState<string>("")
-
-
+    const [bannerFile, setBannerFile] = useState<File | null>(null);
+    const [imageBannerFilePreview, setBannerFilePreview] = useState<string>("")
 
     const [newAnime,setNewAnime] = useState<API.Anime>({
         animeName : "",
@@ -122,6 +122,29 @@ const AddAnime = () => {
         }
         
     }
+    const handleBannerFileChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+        if(e.target.files){
+            setBannerFile(e.target.files[0])
+            setBannerFilePreview(URL.createObjectURL(e.target.files[0]))
+        }
+
+    }
+
+    const handleBannerFileUpload = async(e:React.MouseEvent<HTMLButtonElement>) => {
+            e.preventDefault();
+            if(bannerFile === null){
+                return;
+            }
+            const success = await AddFile(bannerFile).then((data) => {
+                if(data.code === 0){
+                    setSuccessMessage(data.data.message)
+                }else{
+                    setErrorMessage(data.data.message)
+                }
+            })
+            setBannerFile(null)
+            setBannerFilePreview("")
+    }
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const name = e.target.name
@@ -208,8 +231,17 @@ const AddAnime = () => {
                 <hr />
                 <button type='submit' className='btn'>提交</button>
             </form>
-            
+            <div>  
+                <input type="file" onChange={handleBannerFileChange} />  
+                {bannerFile && (<img src={imageBannerFilePreview} alt='photo' style={{maxWidth: "400px", maxHeight: "400px"}} />)}
+                <button onClick={handleBannerFileUpload}>  
+                    上传Banner文件  
+                </button>  
+            </div>  
         </div>
+
+
+        
         </>
     )
 }

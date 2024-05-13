@@ -1,10 +1,21 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { datas } from './../../data/data';
+import { GetListFile } from '../../utils/ApiFunction';
+import { datas } from '../../data/data';
 const Carousel = () => {
     const carouselRef = useRef<HTMLUListElement>(null);
     const intervalRef = useRef<number | null>(null);
     const [current,setCurrent] = useState(1)
     const [translateX,setTranslateX] = useState(0)
+    const [dataList, setDataList] = useState([])
+    let dataLength : number = 5;
+    const [isFile,SetIsFile] = useState<boolean>(false)
+    // useEffect(() => {
+    //     GetListFile().then((data) => {
+    //         setDataList(data.data)
+    //         dataLength = data.data.length
+    //         SetIsFile(true)
+    //     })
+    // },[])
     const slides = () => {
         if(datas.length > 1){
             let items = datas.map((data,index) => (
@@ -14,11 +25,11 @@ const Carousel = () => {
             ))
 
             return [
-                <li key={datas.length + 1} className='slide'>
+                <li key={dataList.length + 1} className='slide'>
                     <img src={datas[datas.length - 1].img} alt='nature' style={{width: '100%', height: '100%'}}/>
                 </li>,
                 ...items,
-                <li key={datas.length + 2} className='slide'>
+                <li key={dataList.length + 2} className='slide'>
                     <img src={datas[0].img} alt='nature' style={{width: '100%', height: '100%'}}/>
                 </li>,
             ]
@@ -41,20 +52,24 @@ const Carousel = () => {
                 }
                 
             }else if(mode === "next"){
-                if(current >= datas.length){
-                    setTranslateX(carouselRef.current.clientWidth * (datas.length + 1))
-                    setCurrent(1)
-                }else{
-                    setTranslateX((carouselRef.current.clientWidth ?? 0) * (current + 1))
-                    setCurrent((next) => ++next)
-                }
+                    if(current >= datas.length){
+                        setTranslateX(carouselRef.current.clientWidth * (datas.length + 1))
+                        setCurrent(1)
+                        console.log("1")
+                    }else{
+                        setTranslateX((carouselRef.current.clientWidth ?? 0) * (current + 1))
+                        setCurrent((next) => ++next)
+                        console.log("2")
+                    }
+                
+                
             }
         }
         
     },[current])
 
     useLayoutEffect(() => {
-        if(carouselRef.current !== null){
+        if(carouselRef.current !== null && datas.length > 0){
         setTranslateX(carouselRef.current.clientWidth * current)
         }
     },[])
@@ -71,7 +86,6 @@ const Carousel = () => {
                 }
             }
         }
-
         document.addEventListener("transitionend",transitionEnd)
 
         return () => {
@@ -80,13 +94,15 @@ const Carousel = () => {
     },[current])
 
     useEffect(() => {
-        if(intervalRef.current !== null){
+        if(intervalRef.current !== null && datas.length > 0){
             clearInterval(intervalRef.current)
         }
+
+            intervalRef.current = setInterval(() => {
+                actionHandle("next")
+            },3000)
         
-        intervalRef.current = setInterval(() => {
-            actionHandle("next")
-        },3000)
+        
         
 
         return () => {
@@ -94,15 +110,20 @@ const Carousel = () => {
                 clearInterval(intervalRef.current)
             }
         }
-    },[actionHandle])
+    },[current])
 
 
     return (
         <>
             <div className='carousel'>
-                <ul className='container'  ref={carouselRef} style={{transform: `translate3d(${-translateX}px,0,0)`}}>
-                    {slides()}
-                </ul>
+                {
+                     (
+                        <ul className='container'  ref={carouselRef} style={{transform: `translate3d(${-translateX}px,0,0)`}}>
+                            {slides()}
+                        </ul>
+                    )
+                }
+                
                 <button onClick={() => actionHandle("prev")} className={'Btn BtnLeft'}>{"<"}</button>
                 <button onClick={() => actionHandle("next")} className={'Btn BtnRight'}>{">"}</button>
             </div>

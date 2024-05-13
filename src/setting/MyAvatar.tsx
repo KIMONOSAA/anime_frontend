@@ -79,7 +79,7 @@ function MyAvatar() {
                               <img src={`data:image/png;base64, ${updatedSelectedFile}`} alt="Selected Avatar" />
                              )
                              :(
-                              <img src="src/assets/images/cropped-2400-1280-1353172.jpg" alt="Selected Avatar" />
+                              <img src="/cropped-2400-1280-1353172.jpg" alt="Selected Avatar" />
                              )
                           ) }  
                         </div>  

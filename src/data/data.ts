@@ -3,31 +3,31 @@ export const datas = [
         "name" : "迷宫饭",
         "type" : "日漫番剧",
         "description" : "hahahahajhahahsafqasfasfasfasfasfasfa",
-        "img" : "../../public/DM_20240302131615_003.webp"
+        "img" : "/DM_20240302131615_003.webp"
     },
     {
         "name" : "我心里危险的东西 第二季",
         "type" : "日漫番剧",
         "description" : "hahahahajhahahsafqasfasfasfasfasfasfa",
-        "img" : "../../public/DM_20240302131615_001.webp"
+        "img" : "/DM_20240302131615_001.webp"
     },
     {
         "name" : "我独自升级",
         "type" : "日漫番剧",
         "description" : "hahahahajhahahsafqasfasfasfasfasfasfa",
-        "img" : "../../public/DM_20240302131615_002.webp"
+        "img" : "/DM_20240302131615_002.webp"
     },
     {
         "name" : "间谍过家家 第二季",
         "type" : "日漫番剧",
         "description" : "hahahahajhahahsafqasfasfasfasfasfasfa",
-        "img" : "../../public/DM_20240302131615_004.webp"
+        "img" : "/DM_20240302131615_004.webp"
     },
     {
         "name" : "葬送的芙莉莲",
         "type" : "日漫番剧",
         "description" : "改编自原作山田钟人，作画阿部司的同名漫画。在打倒了魔王的勇者一行人当中，魔法使芙莉莲是一位精灵，她和另外三人有着不一样的地方。生活在“之后”的世界里，她感受到了什么；留下来的人们所编织的葬送与祈祷又意",
-        "img" : "../../public/DM_20240302131657_001.webp"
+        "img" : "/DM_20240302131657_001.webp"
     },
 ]
 

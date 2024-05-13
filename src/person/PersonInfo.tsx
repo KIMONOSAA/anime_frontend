@@ -12,7 +12,7 @@ function PersonInfo() {
   }
   return (
     <div className='overall'>
-    <img className='image' src='src/assets/images/cropped-2400-1280-1353172.jpg'  />
+    <img className='image' src='/cropped-2400-1280-1353172.jpg'  />
     <div className='user'>
       
       <div className='user-info'>

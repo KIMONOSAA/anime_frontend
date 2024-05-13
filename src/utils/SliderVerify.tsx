@@ -51,7 +51,7 @@ function SliderVerify({status,SliderVerifyHnadlerFail,SliderVerifyHnadlerSuccess
 
     const getRandomImgSrc = () => {
         return (
-            `/src/assets/images/cropped-2400-1280-1353172.jpg`
+            `/cropped-2400-1280-1353172.jpg`
           );
     }
 

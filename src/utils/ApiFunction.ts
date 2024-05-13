@@ -2,9 +2,15 @@ import axios from 'axios';
 import Header from './../home/top/Header';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+let url = null;
+if(process.env.NODE_ENV === 'production'){
+    url = "https://com.kimokan.top:9193"
+}else{
+    url = "http://localhost:9193"
+}
 
 export const api = axios.create({
-    baseURL: "http://192.210.167.197:9193"
+    baseURL: url
 })
 
 export const getHeaders = () : {
@@ -92,10 +98,12 @@ export async function addAnimeLink({section,uuid,videoFile} : API.VideoInSection
         formData.append("videoId",uuid)
         formData.append("section",String(section))
         if(videoFile){
-        formData.append("file",videoFile)
+        formData.append("uploadFile",videoFile)
         }
         try {
-            const response = await api.post("/video/add/url",formData);
+            const response = await api.post("/video/add/url",formData,{
+                headers: getHeaders()
+            });
 
             return response.data
         } catch (error) {
@@ -605,3 +613,42 @@ export async function ListGetAllCommentForScoring(videoId:string){
 }
 
 
+export async function AddFile(avatarFormDate:File | null){
+    try {
+        const formData = new FormData();
+        if(avatarFormDate){
+            formData.append("file",avatarFormDate);
+            const result = await api.post("file/add",formData,{
+                headers : getHeaders()
+            })
+            return result.data
+        }else{
+            throw new Error('没有选择文件');
+        }
+        
+    } catch (error) {
+        if(error instanceof Error){
+            throw new Error(`图片提交失败：${error.message}`)
+        }else{
+            throw new Error(`连接失败`)
+        }
+    }
+}
+
+export async function GetListFile(){
+    try {
+
+        const result = await api.get("file/get/file",{
+            headers : getHeaders()
+        })
+        return result.data
+       
+        
+    } catch (error) {
+        if(error instanceof Error){
+            throw new Error(`图片提交失败：${error.message}`)
+        }else{
+            throw new Error(`连接失败`)
+        }
+    }
+}

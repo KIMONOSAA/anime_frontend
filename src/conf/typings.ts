@@ -7,6 +7,10 @@ declare namespace API {
         userId: string;
         file: File | null;
     }
+    interface VideoUrlIdAndSectionId { 
+        urlId : number;
+        sectionId : number;
+    }
     interface IsUserAndInfo {
         name: string;
         description: string;
@@ -158,6 +162,10 @@ declare namespace API {
         videoUrlId: number;
         parent: number | null;
     }
+    interface item{
+        sectionId : number;
+        urlId : number ;
+    }
     interface VideoDataAndVideoInfoInterface {
         id: number;
         dataId: string | undefined;
@@ -165,8 +173,8 @@ declare namespace API {
         info: API.VideoInfo;
         photo?: string;
         name?: string;
-        item: number;
-        videoNumber: number[];
+        item: item;
+        videoNumber: [];
         date: number[];
         animeCompany: string;
         directorName: string;
